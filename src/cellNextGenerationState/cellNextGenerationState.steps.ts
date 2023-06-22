@@ -6,7 +6,7 @@ export const cellNextGenerationStateSteps: StepDefinitions = ({ given, and, when
     let cellState: State;
     let nextGenerationState: NextGenerationState;
 
-    given(/^a (living|dead) cell with ([0-8]) neighbours$/, (healthState: HealthState, numberOfNeighbors: string) => {
+    given(/^a (living|dead) cell with ([0-8]) neighbors$/, (healthState: HealthState, numberOfNeighbors: string) => {
         cellState = {
             health: healthState,
             numberOfNeighbors: Number(numberOfNeighbors)

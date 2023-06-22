@@ -19,3 +19,8 @@ export const isNextGenerationDeadState = (nextGenerationState: NextGenerationSta
     nextGenerationState.health === "dead";
 
 export type NextGenerationState = NextGenerationLivingState | NextGenerationDeadState;
+
+export type Position = {
+    x: number;
+    y: number;
+};
