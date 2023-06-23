@@ -13,7 +13,7 @@ export const aliveNeighborsCountSteps: StepDefinitions = ({ given, and, when, th
         matrix = fromCucumberTableToGeneration(table);
     });
 
-    and(/^my cell is in column (\d+) and row (\d+)$/, (y: string, x: string) => {
+    and(/^my cell is in column (\d+) and row (\d+)$/, (x: string, y: string) => {
         position = {x: Number(x)-1, y: Number(y)-1};
     });
 

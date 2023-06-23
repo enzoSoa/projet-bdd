@@ -1,1 +1,1 @@
-export type Generation = boolean[][];
+export type Generation = boolean[][]; 
