@@ -2,7 +2,7 @@ import { StepDefinitions } from "jest-cucumber";
 import { DeathCause, HealthState, NextGenerationState, State, isNextGenerationDeadState } from "../types/cellState";
 import { cellNextGenerationState } from "./cellNextGenerationState";
 
-export const cellNextGenerationStateSteps: StepDefinitions = ({ given, and, when, then }) => {
+export const cellNextGenerationStateSteps: StepDefinitions = ({ given, when, then }) => {
     let cellState: State;
     let nextGenerationState: NextGenerationState;
 

@@ -23,6 +23,7 @@ export default {
   collectCoverageFrom: [
     "src/**/*.ts",
     "!src/**/*.steps.ts",
+    "!src/types/*",
   ],
 
   // The directory where Jest should output its coverage files
