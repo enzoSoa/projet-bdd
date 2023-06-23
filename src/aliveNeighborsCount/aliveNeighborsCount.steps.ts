@@ -2,6 +2,7 @@ import { StepDefinitions } from "jest-cucumber";
 import { Generation } from "../types/generation";
 import { Position } from "../types/cellState";
 import { aliveNeighborsCount } from "./aliveNeighborsCount";
+import { fromCucumberTableToGeneration } from "../utils";
 
 export const aliveNeighborsCountSteps: StepDefinitions = ({ given, and, when, then }) => {
     let matrix: Generation;
@@ -9,7 +10,7 @@ export const aliveNeighborsCountSteps: StepDefinitions = ({ given, and, when, th
     let neighborsCount: Number;
 
     given(/^generation currently look like this:$/, (table: Record<string, string>[]) => {
-        matrix = table.map(row => Object.values(row).map(cell => cell === "X"));
+        matrix = fromCucumberTableToGeneration(table);
     });
 
     and(/^my cell is in column (\d+) and row (\d+)$/, (y: string, x: string) => {
